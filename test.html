@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<head>
+    <title>Saurabh Bandawar</title>
+    <!--<link rel="stylesheet" type="text/css" href="styles.css" />-->
+    <link rel="stylesheet" type="text/css" href="test.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3l0JHDA5kuh78Qw2JH2ILS4q1VrjbJGE&callback=initMap" type="text/javascript"></script>
+    <script type='text/javascript'>
+        function init_map() {
+            var myOptions = {
+                zoom: 12,
+                center: new google.maps.LatLng(40.7294195, -74.0704809),
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+            marker = new google.maps.Marker({
+                map: map,
+                position: new google.maps.LatLng(40.7294195, -74.0704809)
+            });
+            infowindow = new google.maps.InfoWindow({
+                content: '<strong>Find me here!!!!</strong><br>9 Garrison Ave apt 33 Jersey City New Jersey<br>'
+            });
+            google.maps.event.addListener(marker, 'click', function() {
+                infowindow.open(map, marker);
+            });
+            infowindow.open(map, marker);
+        }
+        google.maps.event.addDomListener(window, 'load', init_map);
+    </script>
+</head>
+<body>
+<div class="main_container">
+    <!--top menu-->
+    <div class="top_menu">
+            <ul class="menu">
+                <li class="top"><a href="index.html" class="top_nav" id="logo">S<sub>B</sub> </a></li>
+                <li class="top"><a href="index.html" class="top_nav"> Home</a></li>
+                <li class="top"><a href="#" class="top_nav">Academic Projects</a></li>
+                <li class="top"><a href="#" class="top_nav">Work</a></li>
+                <li class="top"><a href="#" class="top_nav">Contact</a></li>
+                <li class="top"><a href="#" class="top_nav">Resume</a></li>
+            </ul>
+    </div>
+    <div class="container">
+        <!--row1 about me -->
+        <div class="row1">
+            <div class="navigation">
+                <div class="heading">
+                    <h1>Saurabh Bandawar</h1>
+                </div>
+                <div class="menu_list">
+                    <a href="index.html" class="l_nav"> Home</a>
+                    <a href="#" class="l_nav">Academic Projects</a>
+                    <a href="#" class="l_nav">Work</a>
+                    <a href="#" class="l_nav">Contact</a>
+                    <a href="#" class="l_nav">Resume</a>
+                </div>
+            </div>
+            <div class="about_me">
+                <div class="description">
+                    <h1 class="heading_about_me">About Me</h1>
+                    <img src="images/saurabh.jpeg" class="my_image" alt="Saurabh Bandawar">
+                    <div class="info">
+                        <p>
+                            Hi!
+                            <br> I am Saurabh Bandawar. I am currently Pursuing my Masters in Information System at Pace University, New York.
+                        </p>
+                        <p>
+                            I look forward to expand my knowledgebase in Full Stack Development by working with some really talented people of the industry.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--row2 work/project-->
+        <div class="row2">
+            <div class="work">
+                <div class="p_head">
+                    <h1>Academic Projects</h1>
+                    <h2>Some of my latest projects.</h2>
+                </div>
+                <div class="academic_projects">
+                    <ul class="ap">
+                        <li class="p_name">Local Train Ticketing Application</li>
+                        <ul class="p_detail">
+                            <li>
+                                Designed a train ticketing application for Mumbai local train system using Android, C#, asp.net, CSS, JavaScript, SQL
+                            </li>
+                            <li>
+                                Developed the front-end user interface, database, and backend logic and made it available on desktops (windows OS)
+                                and Android Devices
+                            </li>
+                        </ul >
+                        <li class="p_name">Website Design : Electronic Store</li>
+                        <ul class="p_detail">
+                            <li>
+                                Developed online shopping website for an electronics store using HTML, CSS,SCSS, JavaScript, ASP.net, MySQL
+                            </li>
+                            <li>
+                                Developed database and user interface
+                            </li>
+                        </ul>
+                        <li class="p_name">Website Design : Demo Tourism Website </li>
+                        <ul class="p_detail">
+                            <li>
+                                Designed online tourism website using HTML, CSS, JavaScript, ASP.net, MySQL
+                            </li>
+                            <li>
+                                Developed interactive front end user interface
+                            </li>
+                        </ul>
+                        <li class="p_name">Website Design : Ultra Store</li>
+                        <ul class="p_detail">
+                            <li >
+                                Developed online shopping website for an electronics store using HTML, CSS,SCSS
+                            </li>
+                        </ul>
+                        <li class="p_name">Pace University Website Redesign</li>
+                        <ul class="p_detail">
+                            <li>
+                                Redesigned the Pace University website to simplify the created an architecture using Sketch.
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="work_ex">
+                <div class="wx">
+                    <div class="work_head">
+                        <h1 class="h4">Work Experience</h1>
+                        <h2>A draft from CV</h2>
+                    </div>
+
+                    <!--<div class="res_img">-->
+                    <!--<img src="images/saurabh_resume.png "class="img_r" alt="Saurabh Bandawar Resume">-->
+                    <!--</div>-->
+                    <div class="work_details">
+                        <ul class="wd">
+                            <li class="work_title"> Software Developer Intern At Amphora</li>
+                            <ul class="work_detail">
+                                <li>Developed a Skype Bot using NodeJS and connected it to Go serve</li>
+                                <li>Deployed Webpages and APIs on Heroku and Amazon EC2 server.</li>
+                                <li>Worked on creating databases in MySql using Gorm queries for Go server.</li>
+                                <li>Working on Outlook API using NodeJS and Go server and sending data it the front-end.</li>
+                            </ul>
+                            <li class="work_title">Intern at Suven Consultants & Technology Pvt. Ltd.</li>
+                            <ul class="work_detail">
+                                <li>Developed an Android based demo application, an off line Voting System</li>
+                            </ul>
+                            <li class="work_title"> Intern at We Chat</li>
+                            <ul class="work_detail">
+                                <li>Testing and reporting bugs or problems occurred while using WE CHAT daily application</li>
+                            </ul>
+                            <li class="work_title">Brand Ambassador KT280</li>
+                            <ul class="work_detail">
+                                <li>Sold technical books to students. Named top salesperson for this organization.</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--row3 contact details-->
+        <div class="row3" id="contact">
+            <div class="connect">
+                <div class="addr">
+                    <div class="contact_head">
+                        <h1>Swing By</h1>
+                    </div>
+                    <div class="contact_details">
+                        <p>..for a cup of coffee, or whatever.</p>
+                        <p>9 Garrison Avenue apt 33,</p>
+                        <p>Jersey City, NJ, 07306</p>
+                        <p>+1 2016166651</p>
+                        <p>saurabhbandawar3@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact_form">
+                    <h2 class="gin">GET IN TOUCH</h2>
+                    <form class="conn" action="#" target="_blank">
+                        <div class="name">
+                            <label>Name</label>
+                            <input class="name_input"  type="text" required name="Name">
+                        </div>
+                        <div class="email">
+                            <label>Email</label>
+                            <input class="email_input"  type="text" required name="Email">
+                        </div>
+                        <div class="message">
+                            <label>Message</label>
+                            <input class="message_input" type="text" required name="Message">
+                        </div>
+                        <button type="submit" class="submit">Send</button>
+                    </form>
+                </div>
+            </div>
+            <div class="locate_me">
+                <div class="map_heading">
+                    <h1>Find me here...</h1>
+                </div>
+                <div class="map">
+                    <div style='overflow:hidden;height:500px;width:500px;'>
+                        <div id='gmap_canvas'></div>
+                        <div><small><a href="https://www.embedgooglemaps.com">embedgooglemaps.com</a></small></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Resume Download-->
+        <div class="download_resume">
+            <a href="Saurabh B Resume.pdf" download="" class="button">Download Resume</a>
+        </div>
+        <!--Footer-->
+        <div class="bottom">
+            <p>Saurabh Bandawar</p>
+            <p>All Rights Reserved 2017</p>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
